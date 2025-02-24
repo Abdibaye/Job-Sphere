@@ -14,7 +14,9 @@ function HomePage() {
   const [postPerPage, setPostPerPage] = useState(3);
   const [totalPosts, settotalPosts] = useState(1);
 
-  const api = `https://joblisting-rd8f.onrender.com/api/jobs?limit=${postPerPage}&page=${currentPage}`;
+  // const api = `https://joblisting-rd8f.onrender.com/api/jobs?limit=${postPerPage}&page=${currentPage}`;
+     const api = `https://joblisting-3hjv.onrender.com/api/jobs?limit=${postPerPage}&pages=${currentPage}`;
+  
 
   useEffect(() => {
     const fetchData = async () => {

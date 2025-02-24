@@ -19,7 +19,7 @@ export default function Feed({ jobs, setJobs }) {
    };
    return (
       <>
-      <div className="font-inter mt-5 ml-6 md:ml-7 lg:ml-9 w-[75%] h-[45%]">
+      <div className="font-inter  mb-4 mt-5 ml-6 md:ml-7 lg:ml-9 w-[75%] h-[45%]">
       <div className="flex items-center justify-center h-12">
             <div className="bg-white w-[40%] rounded-[20px] flex h-full w-[500px] border-2 items-center justify-center">
                 <IoSearch className="w-[24px] h-[24px] m-2 "></IoSearch>
