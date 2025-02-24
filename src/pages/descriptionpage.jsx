@@ -1,12 +1,13 @@
 import Button from '@mui/material/Button';
-// import { CiBookmark,IoShareSocialOutline } from "react-icons/ci";
+import Search from '../components/search';
 
 
 function Description() {
     return(
-        <div className=" h-screen">
+        <div className=" h-screen bg-[#F3F3F3]">
             <div className="flex justify-around p-4">
                 <div className="w-[1000px] ">
+                    <Search />
                     <div className="w-[800px] h-[480px] ml-[100px] mt-[30px] rounded-xl border-gray border-2 bg-white ">
                         <div className="flex   bg-white h-[100px] gap-2">
                             <div className="w-[138px] h-[138px]">
@@ -59,7 +60,7 @@ function Description() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-[30px] mr-[150px] rounded-xl border-gray border-2 bg-white w-[250px]">
+                <div className="mt-[80px] mr-[150px] rounded-xl border-gray border-2 bg-white w-[250px]">
                     <div className='text-center font-[600] mt-3 mb-3'>
                         Related
                     </div>
