@@ -5,6 +5,7 @@ import Saved from '../components/saved';
 import Filter from '../components/filter';
 import Pagination from '../components/pagination';
 import React, { useEffect, useState } from 'react';
+import Hero from '../components/hero';
 
 
 function HomePage() {
@@ -37,7 +38,8 @@ function HomePage() {
   
 
   return (
-    <>
+    <div className='bg-[#F3F3F3]'>
+      <Hero />
       <div className='flex mt-4 justify-between w-[100lvw] h-1/3'>
         <Filter />
         <Feed jobs={jobs} setJobs={setJobs} />
@@ -49,7 +51,7 @@ function HomePage() {
         postPerPage={postPerPage} 
         jobs={jobs}
       />
-    </>
+    </div>
   );
 }
 

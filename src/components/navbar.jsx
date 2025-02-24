@@ -26,7 +26,6 @@ function Navbar() {
                 </button>
             </div>
         </div>
-        <Search />
         <Outlet />
         </>
     );

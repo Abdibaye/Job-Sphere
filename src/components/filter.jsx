@@ -17,7 +17,7 @@ function Filter() {
     setValue(newValue);
   };
     return (
-        <div className= "font-inter mt-5 ml-3 rounded-xl border-gray border-2 bg-white h-[550px] w-[35%]">
+        <div className= "font-inter mt-5 ml-5 rounded-xl border-gray border-2 bg-white h-[550px] w-[30%]">
             <div className="text-center font-bold mt-2 text-[16px]">Filter</div>
             <div className="text-start ml-2 mb-2">
                 <div className="mb-1 leading-[24.2px] text-[18px] font-[300] font-inter">

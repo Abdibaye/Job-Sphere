@@ -17,7 +17,7 @@ function Saved({ jobs = [], setJobs }) {
     };
 
     return (
-        <div className="mt-7 mr-3 md:mr-5 lg:mr-8 rounded-xl border-gray border-2 bg-white h-[500px] w-[40%]">
+        <div className="mt-7  drop-shadow-md md:mr-5 lg:mr-10    rounded-xl border-gray border-2 bg-white h-[500px] w-[25%]">
             <div className="text-center pt-2 font-bold text-[20px]">Saved Jobs</div>
             {savedJobs.length > 0 ? (
                 savedJobs.map((obj) => (

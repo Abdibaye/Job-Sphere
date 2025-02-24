@@ -1,6 +1,10 @@
 import React from "react";
 import Job from "./job";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import Search from "./search";
+import { IoSearch } from "react-icons/io5";
+import Button from '@mui/material/Button';
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function Feed({ jobs, setJobs }) {
 
@@ -15,7 +19,21 @@ export default function Feed({ jobs, setJobs }) {
    };
    return (
       <>
-      <div className="font-inter ml-6 md:ml-7 lg:ml-9 w-[93%] h-[45%]">
+      <div className="font-inter mt-5 ml-6 md:ml-7 lg:ml-9 w-[75%] h-[45%]">
+      <div className="flex items-center justify-center h-12">
+            <div className="bg-white w-[40%] rounded-[20px] flex h-full w-[500px] border-2 items-center justify-center">
+                <IoSearch className="w-[24px] h-[24px] m-2 "></IoSearch>
+                <input placeholder="Job title, Keywords, or Company name" className="text-[14px] h-full w-[70%] mr-1 appearance-none bg-transparent border-none w-full focus:outline-none" type="text" />
+                <div className="">
+                <div className="p-4">
+                <Button sx={{
+        backgroundColor: '#0034D1',    
+        height: "35px"
+      }} variant="contained"  disableElevation>Search</Button>
+                </div>
+                </div>
+            </div>
+        </div>
          {jobs.length > 0 ? (
             jobs.map((job) => (
                <div key={job.id}>

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 
 export default function Job({  logo, title, company,type,salary,  isBookMarked, handleBookMark, key, description }) {
     return (
-        <div className="p-3 mb-4 border-solid border-gray border-2 flex flex-col translate-x-3 translate-y-5 rounded-[20px] h-[250x] w-[95%]">
+        <div className="p-3 bg-white drop-shadow-md ml-6 mb-4 border-solid border-gray border-2 flex flex-col translate-x-3 translate-y-5 rounded-[20px] h-[250x] w-[90%]">
             <div className="flex">
                 <div>
                     <img className="h-[53px] w-[53px]" 
@@ -19,7 +19,7 @@ export default function Job({  logo, title, company,type,salary,  isBookMarked, 
                         <p className="pb-1 gap-5 color text-[32px] font-[570] text-gray-950 dark:text-black">{title}</p>
                     </Link>
                     <p className="font-normal">{company}</p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 font-light">
                         <div className="bg-gray-200">{type}</div>
                         <div className="bg-gray-200">Full-Time</div>
                         <div className="bg-gray-200">{salary}</div>
