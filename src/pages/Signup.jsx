@@ -1,12 +1,36 @@
 import { Button } from "@mui/material";
-import React from "react"
+import React, { useState } from "react"
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoPersonOutline } from "react-icons/io5";
 import { CiLock } from "react-icons/ci";
+import { useStoredAutho } from "../store/store";
+
 
 
 
 function SignUp() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+    const [conform, setConform] = useState('');
+
+
+    const updateFirstName = useStoredAutho((state) => state.updateFirstName)
+    const updateLastName = useStoredAutho((state) => state.updateLastName)
+    const updateEmail = useStoredAutho((state) => state.updateEmail)
+    const updatePassword = useStoredAutho((state) => state.updatePassword)
+    const initialUserData = useStoredAutho((state) => state.initialUserData)
+
+    const handleClick = () => {
+        updateFirstName(firstName)
+        updateLastName(lastName)
+        updateEmail(email)
+        updatePassword(password)
+        alert("done!")
+        console.log(initialUserData)
+    }
+
     return(
         <div className="flex h-screen ">
             <div className="flex items-center justify-center w-1/2">
@@ -17,26 +41,26 @@ function SignUp() {
                  <div className="flex flex-col mb-5 ">
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-bottom p-left mb-2">
                             <IoPersonOutline className="ml-2 mt-[11px] " />
-                            <input type="firsname" className="block w-full p-2" placeholder="First Name" />  
+                            <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}  className="appearance-none bg-transparent border-none focus:outline-none w-full p-2" placeholder="First Name" />  
                         </div>
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-    bottom p-left mb-2">
                             <IoPersonOutline className="ml-2 mt-[11px]" />         
-                            <input type="lastname" className="block w-full p-2" placeholder="Last Nae" />  
+                            <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className="appearance-none bg-transparent border-none focus:outline-none w-full p-2" placeholder="Last Nae" />  
                         </div>
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-bottom p-left mb-2">
                             < MdOutlineMailOutline className="ml-2 mt-[11px]" />
-                            <input type="email" className="block w-full  p-2" placeholder="Email" />  
+                            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="appearance-none bg-transparent border-none focus:outline-none w-full  p-2" placeholder="Email" />  
                         </div>
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-bottom p-left mb-2">
                             <CiLock className="ml-2 mt-[11px]" />
-                            <input type="password" className="block w-full p-2" placeholder="Password" />  
+                            <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} className="appearance-none bg-transparent border-none focus:outline-none w-full p-2" placeholder="Password" />  
                         </div>
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-bottom p-left mb-2">
                             <CiLock className="ml-2 mt-[11px]" />
-                            <input type="comfirmpassword" className="block w-full p-2" placeholder="Comfirm Password" />  
+                            <input type="text" value={conform} onChange={(e) => setConform(e.target.value)} className="appearance-none bg-transparent border-none focus:outline-none   w-full p-2" placeholder="Conform Password" />  
                         </div>
                  </div>
-                 <button className="block  w-full bg-[#0034D1] text-white p-2 mb-2 text-center">
+                 <button onClick={handleClick}  className="block  w-full bg-[#0034D1] text-white p-2 mb-2 text-center">
                  Create account   
                  </button>
                  <div>----or-----</div>

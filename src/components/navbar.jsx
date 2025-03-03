@@ -12,10 +12,10 @@ function Navbar() {
 
             <div className="flex-1 flex justify-center">
                 <ul className="text-s font-inter sm:text-base md:text-lg lg:text-lg flex gap-5 font-normal text-gray-950 dark:text-black">
-                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1]">Job Search</li>
-                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1]">My Application</li>
-                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1]">Companies</li>
-                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1]">Contact Us</li>
+                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1] hover: cursor-pointer ">Job Search</li>
+                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1] hover: cursor-pointer">My Application</li>
+                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1] hover: cursor-pointer">Companies</li>
+                    <li className="transition-all duration-300 hover:font-[450] hover:underline decoration-2 decoration-[#0034D1] hover:text-[#0034D1] hover: cursor-pointer">Contact Us</li>
                 </ul>
             </div>
             <div className="font-open-sans flex justify-center items-center p-4 ">

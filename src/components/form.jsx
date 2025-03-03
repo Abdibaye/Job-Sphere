@@ -29,9 +29,7 @@ const formvalidation = Yup.object().shape({
 function Form() { 
   const [step, setStep] = useState(0);
 
-  const onSubmit = (values, actions) => {
-    console.log(values);
-    console.log(actions);
+  const onSubmit = (values) => {
     if (step === 2) {
       alert(JSON.stringify(values, null, 2));
     }
@@ -57,7 +55,7 @@ function Form() {
   const handleBack = () => {
     if (step > 0) {
       setStep(step - 1);
-    }
+    }``
   };
 
   const validateStep = (step, values) => {

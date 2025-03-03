@@ -9,7 +9,7 @@ import Forms from "./pages/formpage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Routes>
         {/* Default route for login */}
         <Route path="/" element={<LoginPage />} />
@@ -21,7 +21,7 @@ function App() {
         </Route>
 
         {/* Signup route */}
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/singup" element={<SignUp />} />
 
 
         <Route path='/form' element = {<Forms />} />

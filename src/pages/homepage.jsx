@@ -1,5 +1,3 @@
-import Navbar from '../components/navbar';
-import Search from '../components/search';
 import Feed from '../components/feed';
 import Saved from '../components/saved';
 import Filter from '../components/filter';
@@ -14,7 +12,6 @@ function HomePage() {
   const [postPerPage, setPostPerPage] = useState(3);
   const [totalPosts, settotalPosts] = useState(1);
 
-  // const api = `https://joblisting-rd8f.onrender.com/api/jobs?limit=${postPerPage}&page=${currentPage}`;
      const api = `https://joblisting-3hjv.onrender.com/api/jobs?limit=${postPerPage}&pages=${currentPage}`;
   
 
@@ -43,7 +40,7 @@ function HomePage() {
     <div className='bg-[#F3F3F3]'>
       <Hero />
       <div className='flex mt-4 justify-between w-[100lvw] h-1/3'>
-        <Filter />
+        <Filter jobs={jobs} setJobs={setJobs} />
         <Feed jobs={jobs} setJobs={setJobs} />
         <Saved jobs={jobs} setJobs={setJobs} />
       </div>

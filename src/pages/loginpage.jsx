@@ -22,11 +22,11 @@ function LoginPage() {
                     <div className="mb-5">
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-bottom p-left mb-3">
                             <IoPersonOutline className="ml-2 mt-[11px] " />
-                            <input type="firsname" className="block w-full p-2 style-none" placeholder="First Name" />  
+                            <input type="firsname" className="block w-full p-2 appearance-none bg-transparent border-none focus:outline-none" placeholder="First Name" />  
                         </div>
                         <div className="flex w-fill h-hug rounded-lg border border-gray-300 p-top p-right p-    bottom p-left mb-3">
                             <IoPersonOutline className="ml-2 mt-[11px]" />         
-                            <input type="lastname" className="block w-full p-2" placeholder="Last Nae" />  
+                            <input type="lastname" className="appearance-none bg-transparent border-none focus:outline-none w-full p-2" placeholder="Last Nae" />  
                         </div>  
                     </div>
                     <Link to="/navbar" className="block  w-full bg-[#0034D1] text-white p-2 mb-2 text-center">

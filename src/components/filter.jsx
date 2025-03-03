@@ -5,13 +5,16 @@ import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 
 
+
+
 function valuetext(value) {
     return `${value}°C`;
   }    
   
 
-function Filter() {
+function Filter({jobs,setJobs}) {
     const [value, setValue] = React.useState([20, 37]);
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

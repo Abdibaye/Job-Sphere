@@ -18,7 +18,7 @@ export default function Job({  logo, title, company,type,salary,  isBookMarked, 
                     <Link to="description">
                         <p className="pb-1 gap-5 color text-[32px] font-[570] text-gray-950 dark:text-black">{title}</p>
                     </Link>
-                    <p className="font-normal">{company}</p>
+                    <p className="font-normal">{company}</p>        
                     <div className="flex gap-2 font-light">
                         <div className="bg-gray-200">{type}</div>
                         <div className="bg-gray-200">Full-Time</div>
